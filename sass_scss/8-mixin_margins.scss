@@ -1,13 +1,12 @@
-// should be asindented font-size to body and h1 tags
+@mixin margin-mixin($left-right) {
+  margin-left: $left-right;
+  margin-right: $left-right;
+}
 
 body {
-  font-size: 14px;
+  @include margin-mixin(10px);
+}
 
-  h1 {
-    font-size: 16px;
-
-    &.smaller {
-      font-size: 12px;
-    }
-  }
+div {
+  @include margin-mixin(15px);
 }
